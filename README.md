@@ -10,10 +10,10 @@ There are two types of cars in this game ("white" and "black", according to the 
 Black cards have sentences with blacks, white cards are used to fill in the blanks.
 
 Both types of cards are generated starting from two lists, `black.txt` and `white.txt`. 
-The lists specify the contents of each card, one per line (see examples in `examples/`).
+The lists specify the contents of each card, one per line (see examples).
 For black cards, "blanks" are represented by `_` characters. For example, the line 
 ```
-Study  _ and become _!
+Study _ and become _!
 ```
 will be rendered a card saying "Study *blank* to become a *blank*!".
 
