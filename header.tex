@@ -1,0 +1,79 @@
+\documentclass[a5paper,12pt]{article}
+
+% No ugly justification
+\usepackage[document]{ragged2e}
+
+% landscape
+\usepackage[a5paper,margin=2cm]{geometry}
+
+% do not break words
+\usepackage[none]{hyphenat}
+
+% se the separation between columns
+%\setlength{\columnsep}{2in}
+
+% increase the interline
+\usepackage{setspace}
+\linespread{3}
+
+% use Helvetica
+%\usepackage[scaled]{helvet}
+%\renewcommand\familydefault{\sfdefault} 
+%\usepackage[T1]{fontenc}
+
+% no page numbers
+\pagenumbering{gobble} 
+
+% avoid random indents
+\usepackage{parskip}
+
+% black backgrounds and white text
+\usepackage{xcolor}
+\usepackage{pagecolor}
+
+% Icons
+\usepackage{fontawesome}
+
+% Font sizes
+\usepackage{anyfontsize}
+
+% commands
+\newcommand{\blank}[0]{$\rule{3cm}{0.05cm}$}
+\newcommand{\logo}[0]{{\Large\textbf{\faicon{graduation-cap} Doctorate Against Humanity}}}
+
+\newcommand{\colorpage}[3]{\pagecolor{#1}\color{#2}{\LARGE\textbf{#3}}\vfill\logo{}\newpage}
+\newcommand{\colorback}[2]{\pagecolor{#1}\color{#2}{{\fontsize{50}{50}\textbf{Doctorate Against Humanity}\par}\vfill{\Large\textbf{NetSec Edition. May 19, 2022}}}\newpage}
+
+\newcommand{\colorsingle}[3]{\colorpage{#1}{#2}{#3}\colorback{#1}{#2}}
+\newcommand{\colorpair}[4]{\colorpage{#1}{#2}{#3}\colorpage{#1}{#2}{#4}\colorback{#1}{#2}\colorback{#1}{#2}}
+
+\newcommand{\whitepair}[2]{\colorpair{white}{black}{#1}{#2}}
+\newcommand{\blackpair}[2]{\colorpair{black}{white}{#1}{#2}}
+
+\newcommand{\whitesingle}[1]{\colorsingle{white}{black}{#1}}
+\newcommand{\blacksingle}[1]{\colorsingle{black}{white}{#1}}
+
+\sloppy
+\begin{document}
+{
+\pagecolor{black}\color{white}
+{\LARGE
+\textbf{Instructions}\\
+}
+{\bfseries
+A game on the (en)joys and perils of a PhD.\\
+    \setstretch{1.5}
+\begin{itemize}
+    \item Players draw 10 cards;
+    \item Ben draws a black card;
+    \item Players select white cards from their hand to fill the blanks in the black card, and place them face down on the table;
+    \item All the white cards are shuffled and revealed;
+    \item Ben selects the best completion, and shares a memory/fun story about it;
+    \item Players draw back to 10 white cards.
+\end{itemize}
+}
+\vfill
+\logo{}
+}
+\newpage
+\colorback{black}{white}
