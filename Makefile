@@ -13,10 +13,10 @@ cards.tex:
 	# Remove leading & trailing whitespace
 	awk '{$$1=$$1};1' black.txt > tmp && mv tmp black.txt
 	# Replace the blanks and wrap with the card command
-	sed -e 's/_/\\blank{}/g' -e 's/.*/\\blacksingle{&}/' black.txt >> cards.tex
+	sed -e 's/__/\\blank{}/g' -e 's/.*/\\blacksingle{&}/' black.txt >> cards.tex
 	# Same for white
 	awk '{$$1=$$1};1' white.txt > tmp && mv tmp white.txt
-	sed -e 's/_/\\blank{}/g' -e 's/.*/\\whitesingle{&}/' white.txt >> cards.tex
+	sed -e 's/__/\\blank{}/g' -e 's/.*/\\whitesingle{&}/' white.txt >> cards.tex
 	echo '\\end{document}' >> cards.tex
 
 clean:
